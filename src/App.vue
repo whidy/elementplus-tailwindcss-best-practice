@@ -7,6 +7,10 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div class="py-8">============================<span class="text-lg font-bold text-red-500">请注意下方的按钮样式</span>============================</div>
+  <div>
+    <el-button type="primary">看不见这个可爱的按钮</el-button>
+  </div>
 </template>
 
 <style>
