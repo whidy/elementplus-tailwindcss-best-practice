@@ -9,3 +9,7 @@
 与此同时我将该Demo提交到了codesandbox，大家也看这里：[在线DEMO](https://codesandbox.io/s/full-import-elementplus-9uzlg?file=/README.md)
 
 ![请注意按钮样式](./public/images/show.gif)
+
+本项目对应的文章：
+
+* [Vite中ElementPlus和TailwindCSS最佳实践（一）](https://www.whidy.net/vite-use-elementplus-and-tailwindcss-best-practice-1st)
