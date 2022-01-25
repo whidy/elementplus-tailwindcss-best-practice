@@ -7,13 +7,13 @@
  * 部分色彩见底部注释
  */
 
- const palettes = {
+const palettes = {
   base: ["primary", "success", "warning", "danger", "error", "info"],
   hasLight9: ["primary"],
   hasLight2: ["success", "warning", "danger", "error", "info"] // danger === error
 };
 
-const hasLight9 = function(group) {
+const hasLight9 = function (group) {
   const colors = {};
   group.forEach(name => {
     colors[`el-${name}-light`] = {};
@@ -24,7 +24,7 @@ const hasLight9 = function(group) {
   return colors;
 };
 
-const hasLight2 = function(group) {
+const hasLight2 = function (group) {
   const colors = {};
   group.forEach(name => {
     colors[`el-${name}-light`] = `var(--el-color-${name}-light)`;
@@ -33,7 +33,7 @@ const hasLight2 = function(group) {
   return colors;
 };
 
-const baseColor = function(group) {
+const baseColor = function (group) {
   const colors = {};
   group.forEach(name => {
     colors[`el-${name}`] = `var(--el-color-${name})`;
@@ -41,7 +41,7 @@ const baseColor = function(group) {
   return colors;
 };
 
-const getColors = function(palettes) {
+const getColors = function (palettes) {
   const colors = {};
   for (const key in palettes) {
     const group = palettes[key];
