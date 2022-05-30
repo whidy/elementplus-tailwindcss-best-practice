@@ -16,10 +16,8 @@
 
 ## 2022年05月30日
 
-特别说明：完整引入的时候，使用最新版的 `Element Plus` (**2.2.2**，实际上从**2.2.0**开始即可)及相关依赖的升级后，不存在样式顺序造成的问题了。
+特别说明：完整引入的时候，使用最新版的 `Element Plus` (**2.2.2**，实际上从**2.2.0**开始即可)及相关依赖的升级后， `el-button` 的样式问题被解决了，但这并不代表着 `main.ts` 中的样式引入顺序可以随意写了。**因为依然无法确定在其他的组件和 `Tailwindcss` 相关样式是否可能存在冲突，你仍然需要思考，并加以调整。**关于样式冲突的问题，暂时就研究到这里了。
 
-通过观察，从2.2.0之后，Element Plus对el-button组件的样式做了大幅度改动，详细可见<https://github.com/element-plus/element-plus/releases/tag/2.2.0>
-
-因此如果完整引入 `Element Plus 2.2.0` 以上的情况下，随便写了，没什么特别注意的了~
+通过观察，从2.2.0之后， `Element Plus` 对 `el-button` 组件的样式做了大幅度改动，详细可见<https://github.com/element-plus/element-plus/releases/tag/2.2.0>
 
 如果想看之前的旧的有问题的，可以直接查看分支ID：[f3500f1a83b8fe86ae44d0d28fe58eca8e7bfc91](https://github.com/whidy/elementplus-tailwindcss-best-practice/tree/f3500f1a83b8fe86ae44d0d28fe58eca8e7bfc91)
