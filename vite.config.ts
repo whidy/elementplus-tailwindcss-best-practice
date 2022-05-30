@@ -24,9 +24,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes("assets/styles/main.css")) {
-            return "tailwindcss";
-          }
           if (id.includes("element-plus/theme-chalk/")) { // 当然也可以优化下这个判断，不过目前这样写足矣了。
             return "element-plus";
           }
