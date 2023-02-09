@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { ElConfigProvider } from "element-plus";
 import HelloWorld from "./components/HelloWorld.vue";
+const open = () => {
+  ElMessage("Element-Plus表现非常好！");
+};
 </script>
 
 <template>
-  <el-config-provider size="small" :z-index="3000">
+  <el-config-provider :z-index="3000">
     <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     <HelloWorld msg="Vite + Vue" />
     <div class="py-8">
@@ -16,7 +18,7 @@ import HelloWorld from "./components/HelloWorld.vue";
       <p class="text-sm opacity-50">
         因为更新了vite版本，css变化，下面的按钮可能效果不同，总之按钮的背景色在生产模式下丢失了。
       </p>
-      <el-button type="primary">看不见这个可爱的按钮</el-button>
+      <el-button type="primary" @click="open">看不见这个可爱的按钮</el-button>
     </div>
   </el-config-provider>
 </template>
