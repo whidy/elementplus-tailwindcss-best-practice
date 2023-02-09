@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 通过改写svg的垂直居中属性来兼容antd Vue，体现在message等显示效果的问题上。 */
+svg {
+  vertical-align: initial;
+}

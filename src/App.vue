@@ -1,24 +1,35 @@
 <script setup lang="ts">
-import { ElConfigProvider } from "element-plus";
+import { message } from "ant-design-vue";
 import HelloWorld from "./components/HelloWorld.vue";
+const info = () => {
+  message.info({
+    content: "这个左边的icon歪了，没有垂直居中呢~",
+    duration: 0,
+  });
+};
 </script>
 
 <template>
-  <el-config-provider size="small" :z-index="3000">
-    <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    <HelloWorld msg="Vite + Vue" />
-    <div class="py-8">
-      ============================<span class="text-lg font-bold text-red-500"
-        >请注意下方的按钮样式</span
-      >============================
-    </div>
-    <div>
-      <p class="text-sm opacity-50">
-        因为更新了vite版本，css变化，下面的按钮可能效果不同，总之按钮的背景色在生产模式下丢失了。
-      </p>
-      <el-button type="primary">看不见这个可爱的按钮</el-button>
-    </div>
-  </el-config-provider>
+  <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+  <HelloWorld msg="Vite + Vue" />
+  <div class="py-8">
+    ============================<span class="text-lg font-bold text-red-500"
+      >请注意下方的按钮样式</span
+    >============================
+  </div>
+  <div>
+    <p class="text-sm opacity-50">
+      因为更新了vite版本，css变化，下面的按钮可能效果不同，总之按钮的背景色在生产模式下丢失了。
+    </p>
+    <a-button type="primary" @click="info">看不见这个可爱的按钮</a-button>
+    <p>
+      但是你点击按钮的时候，顶部message的图标默认是没有垂直居中，是因为受到TailwindCSS的一条svg的规则影响，你可能需要重新覆盖这个css为初始。我这里已经修复了，可以见main.css文件。
+    </p>
+    <p>
+      当然上面提到的虽然修复了，但是仍然可能在其他地方出现冲突，这就需要你自己去看了。或者说Antd
+      Vue确实跟tailwindcss结合还有很多细节问题。
+    </p>
+  </div>
 </template>
 
 <style>
